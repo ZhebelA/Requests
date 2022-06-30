@@ -8,7 +8,6 @@ all = requests.get(url)
 intel_list = {}
 for hero in all.json():
     if hero['name'] == 'Hulk' or hero['name'] == 'Captain America' or hero['name'] == 'Thanos':
-        # pprint(f'intelligence of {hero["name"]} = {hero["powerstats"]["intelligence"]}')
         name = str(hero['name'])
         intel = int(hero["powerstats"]["intelligence"])
         intel_list[name] = intel
